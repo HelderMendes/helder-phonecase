@@ -53,7 +53,7 @@ export default function DesignPreview({
     },
     onError: () => {
       toast({
-        titel: 'There was something wrong',
+        title: 'There was something wrong',
         description: 'An error add occurred on our server, please try again!',
         variant: 'destructive',
       });
@@ -89,7 +89,7 @@ export default function DesignPreview({
         <div className='md:col-span-4 md:row-span-2 md:row-end-2 lg:col-span-3'>
           <Phone
             className={cn(`bg-${tw}`)}
-            imgSrc={configuration.croppedImageUrl}
+            imgSrc={configuration.croppedImageUrl!}
           />
         </div>
 

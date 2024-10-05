@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 
 // Inspired by react-hot-toast library
@@ -15,19 +16,12 @@ type ToasterToast = ToastProps & {
   action?: ToastActionElement;
 };
 
-// const actionTypes = {
-//   ADD_TOAST: 'ADD_TOAST',
-//   UPDATE_TOAST: 'UPDATE_TOAST',
-//   DISMISS_TOAST: 'DISMISS_TOAST',
-//   REMOVE_TOAST: 'REMOVE_TOAST',
-// } as const;
-
-// Use a union type directly instead of actionTypes constant
-type ActionType =
-  | 'ADD_TOAST'
-  | 'UPDATE_TOAST'
-  | 'DISMISS_TOAST'
-  | 'REMOVE_TOAST';
+const actionTypes = {
+  ADD_TOAST: 'ADD_TOAST',
+  UPDATE_TOAST: 'UPDATE_TOAST',
+  DISMISS_TOAST: 'DISMISS_TOAST',
+  REMOVE_TOAST: 'REMOVE_TOAST',
+} as const;
 
 let count = 0;
 
