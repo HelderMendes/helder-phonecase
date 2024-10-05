@@ -258,7 +258,7 @@ export default function DesignConfigurator({
                     <Label>Color: {options.color.label}</Label>
                     <div className='mt-3 flex items-center space-x-3'>
                       {COLORS.map((color) => (
-                        <Radio
+                        <RadioGroup.Option
                           key={color.label}
                           value={color}
                           className={({ active, checked }) =>
@@ -276,7 +276,7 @@ export default function DesignConfigurator({
                               'h-8 w-8 rounded-full border border-black border-opacity-10',
                             )}
                           />
-                        </Radio>
+                        </RadioGroup.Option>
                       ))}
                     </div>
                   </RadioGroup>
