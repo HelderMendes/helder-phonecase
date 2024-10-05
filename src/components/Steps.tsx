@@ -16,7 +16,7 @@ const STEPS = [
     url: '/design',
   },
   {
-    name: 'Step 2: Summary',
+    name: 'Step 3: Summary',
     description: 'Review your final design',
     url: '/preview',
   },
@@ -26,7 +26,7 @@ function Steps() {
   const pathname = usePathname();
 
   return (
-    <ol className='rounded-md bg-white lg:flex lg:rounded-none lg:border-x lg:border-gray-200'>
+    <ol className='-mb-5 rounded-md bg-white lg:flex lg:rounded-none lg:border-x lg:border-gray-200'>
       {STEPS.map((step, stepIndex) => {
         const isCurrent = pathname.endsWith(step.url);
         const isCompleted = STEPS.slice(stepIndex + 1).some((step) =>
@@ -82,7 +82,7 @@ function Steps() {
               </span>
 
               {stepIndex !== 0 ? (
-                <div className='hidde absolute inset-0 w-3 lg:block'>
+                <div className='absolute inset-0 hidden w-3 lg:block'>
                   <svg
                     className='h-full w-full text-gray-300'
                     viewBox='0 0 12 82'

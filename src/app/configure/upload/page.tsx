@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 import Dropzone, { FileRejection } from 'react-dropzone';
 import { Progress } from '@/components/ui/progress';
 import { useUploadThing } from '@/lib/uploadthing';
-import { useToast } from '@/hooks/use-toast';
+import { useToast } from '@/components/ui/use-toast';
 
 export default function UploadPage() {
   const { toast } = useToast();

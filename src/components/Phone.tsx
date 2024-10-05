@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { cn } from '@/lib/utils';
 import { HTMLAttributes } from 'react';
 
@@ -33,7 +34,7 @@ export default function Phone({
         <img
           src={imgSrc}
           alt='overlaying phone for case cover image'
-          className='object-cover'
+          className='min-h-full min-w-full object-cover'
         />
       </div>
     </div>
