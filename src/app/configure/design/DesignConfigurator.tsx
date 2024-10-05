@@ -5,7 +5,7 @@ import { cn, formatPrice } from '@/lib/utils';
 import { Rnd } from 'react-rnd';
 import HandleComponent from '@/components/HandleComponent';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { RadioGroup, Radio } from '@headlessui/react';
+import { RadioGroup } from '@headlessui/react';
 import { useRef, useState } from 'react';
 import {
   COLORS,
