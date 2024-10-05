@@ -338,7 +338,7 @@ export default function DesignConfigurator({
                         </Label>
                         <div className='mt-3 space-y-4'>
                           {selectableOptions.map((option, indexOption) => (
-                            <Radio
+                            <RadioGroup.Option
                               key={indexOption}
                               value={option}
                               className={({ active, checked }) =>
@@ -350,18 +350,24 @@ export default function DesignConfigurator({
                             >
                               <span className='flex items-center'>
                                 <span className='flex flex-col text-sm'>
-                                  <label>{option.label}</label>
+                                  {/* <label>{option.label}</label> */}
+                                  <RadioGroup.Label
+                                    className='font-medium text-gray-900'
+                                    as='span'
+                                  >
+                                    {option.label}
+                                  </RadioGroup.Label>
                                   {option.description ? (
-                                    <Radio className='text-gray-500'>
+                                    <RadioGroup.Description className='text-gray-500'>
                                       <span className='block sm:inline'>
                                         {option.description}
                                       </span>
-                                    </Radio>
+                                    </RadioGroup.Description>
                                   ) : null}
                                 </span>
                               </span>
 
-                              <Radio
+                              <RadioGroup.Description
                                 className={cn(
                                   'mt-2 flex text-sm sm:ml-4 sm:mt-0 sm:flex-col sm:text-right',
                                 )}
@@ -369,8 +375,8 @@ export default function DesignConfigurator({
                                 <span className='font-medium text-gray-900'>
                                   {formatPrice(option.price / 100)}
                                 </span>
-                              </Radio>
-                            </Radio>
+                              </RadioGroup.Description>
+                            </RadioGroup.Option>
                           ))}
                         </div>
                       </RadioGroup>
