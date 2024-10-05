@@ -3,12 +3,7 @@ import Phone from '@/components/Phone';
 import { Button } from '@/components/ui/button';
 import { BASE_PRICE, PRODUCT_PRICES } from '@/config/products';
 import { cn, formatPrice } from '@/lib/utils';
-import {
-  COLORS,
-  MODELS,
-  MATERIALS,
-  FINISHES,
-} from '@/validators/option-validator';
+import { COLORS, MODELS } from '@/validators/option-validator';
 import { Configuration } from '@prisma/client';
 import { useMutation } from '@tanstack/react-query';
 import { ArrowRight, Check } from 'lucide-react';
@@ -41,7 +36,7 @@ export default function DesignPreview({
   )?.tw;
 
   const { label: modelLabel } = MODELS.options.find(
-    ({ value }) => model === model,
+    ({ value }) => value === model,
   )!;
 
   let totalPrice = BASE_PRICE;
