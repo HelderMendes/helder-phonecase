@@ -1,4 +1,6 @@
 'use client';
+
+/* eslint-disable no-var */
 import PhoneCaseImage from 'next/image';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { cn, formatPrice } from '@/lib/utils';
@@ -23,7 +25,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Check, ChevronsUpDown } from 'lucide-react';
 import RotateImageHandler from '@/components/RotateImageHandler';
-import { BASE_PRICE } from '../../../../casecobra-master/src/config/products';
+import { BASE_PRICE } from '@/config/products';
 import { useUploadThing } from '@/lib/uploadthing';
 import { useToast } from '@/components/ui/use-toast';
 import { useMutation } from '@tanstack/react-query';
