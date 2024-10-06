@@ -5,7 +5,7 @@ import { cn, formatPrice } from '@/lib/utils';
 import { Rnd } from 'react-rnd';
 import HandleComponent from '@/components/HandleComponent';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { RadioGroup, Radio } from '@headlessui/react';
+import { RadioGroup } from '@headlessui/react';
 import { useRef, useState } from 'react';
 import {
   COLORS,
@@ -258,7 +258,7 @@ export default function DesignConfigurator({
                     <Label>Color: {options.color.label}</Label>
                     <div className='mt-3 flex items-center space-x-3'>
                       {COLORS.map((color) => (
-                        <Radio
+                        <RadioGroup.Option
                           key={color.label}
                           value={color}
                           className={({ active, checked }) =>
@@ -276,7 +276,7 @@ export default function DesignConfigurator({
                               'h-8 w-8 rounded-full border border-black border-opacity-10',
                             )}
                           />
-                        </Radio>
+                        </RadioGroup.Option>
                       ))}
                     </div>
                   </RadioGroup>
@@ -338,7 +338,7 @@ export default function DesignConfigurator({
                         </Label>
                         <div className='mt-3 space-y-4'>
                           {selectableOptions.map((option, indexOption) => (
-                            <Radio
+                            <RadioGroup.Option
                               key={indexOption}
                               value={option}
                               className={({ active, checked }) =>
@@ -350,27 +350,34 @@ export default function DesignConfigurator({
                             >
                               <span className='flex items-center'>
                                 <span className='flex flex-col text-sm'>
-                                  <label>{option.label}</label>
+                                  <RadioGroup.Label
+                                    className='font-medium text-gray-900'
+                                    as='span'
+                                  >
+                                    {option.label}
+                                  </RadioGroup.Label>{' '}
                                   {option.description ? (
-                                    <Radio className='text-gray-500'>
+                                    <RadioGroup.Description
+                                      as='span'
+                                      className='text-gray-500'
+                                    >
                                       <span className='block sm:inline'>
                                         {option.description}
                                       </span>
-                                    </Radio>
+                                    </RadioGroup.Description>
                                   ) : null}
                                 </span>
                               </span>
 
-                              <Radio
-                                className={cn(
-                                  'mt-2 flex text-sm sm:ml-4 sm:mt-0 sm:flex-col sm:text-right',
-                                )}
+                              <RadioGroup.Description
+                                as='span'
+                                className='mt-2 flex text-sm sm:ml-4 sm:mt-0 sm:flex-col sm:text-right'
                               >
                                 <span className='font-medium text-gray-900'>
                                   {formatPrice(option.price / 100)}
                                 </span>
-                              </Radio>
-                            </Radio>
+                              </RadioGroup.Description>
+                            </RadioGroup.Option>
                           ))}
                         </div>
                       </RadioGroup>
