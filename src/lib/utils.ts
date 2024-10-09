@@ -40,7 +40,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: '@@cmhelder',
+      creator: '@cmhelder',
     },
     icons,
     metadataBase: new URL('https://helder-phonecase.vercel.app'),
