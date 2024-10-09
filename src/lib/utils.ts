@@ -43,6 +43,6 @@ export function constructMetadata({
       creator: '@cmhelder',
     },
     icons,
-    metadataBase: new URL('https://phonecasehelder.vercel.app/'),
+    metadataBase: new URL('https://helder-phonecase.vercel.app/'),
   };
 }
