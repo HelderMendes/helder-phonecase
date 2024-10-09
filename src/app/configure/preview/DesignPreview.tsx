@@ -85,10 +85,10 @@ export default function DesignPreview({
 
       <LoginModel isOpen={isLoginModelOpen} setIsOpen={setIsLoginModelOpen} />
 
-      <div className='mt-20 flex flex-col items-center text-sm sm:grid-cols-12 sm:grid-rows-1 sm:gap-x-6 md:grid md:gap-x-8 lg:gap-x-12'>
+      <div className='mt-14 flex flex-col items-center text-sm sm:grid-cols-12 sm:grid-rows-1 sm:gap-x-6 md:grid md:gap-x-8 lg:gap-x-12'>
         <div className='md:col-span-4 md:row-span-2 md:row-end-2 lg:col-span-3'>
           <Phone
-            className={cn(`bg-${tw}`)}
+            className={cn(`bg-${tw}`, 'max-w-[180px] md:max-w-full')}
             imgSrc={configuration.croppedImageUrl!}
           />
         </div>

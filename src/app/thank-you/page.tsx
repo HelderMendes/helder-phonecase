@@ -1,9 +1,10 @@
+import ThankYou from '@/app/thank-you/ThankYou';
 import React, { Suspense } from 'react';
 
 const ThankYouPage = () => {
   return (
     <Suspense>
-      <h1>Thank you</h1>
+      <ThankYou />
     </Suspense>
   );
 };
