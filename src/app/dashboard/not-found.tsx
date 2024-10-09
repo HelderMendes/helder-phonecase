@@ -1,7 +1,6 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import Router from 'next/router';
 import { Button } from '@/components/ui/button';
 
 const DashboardNotAllowed = () => {
