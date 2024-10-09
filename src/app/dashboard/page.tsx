@@ -28,7 +28,15 @@ const DashboardPage = async () => {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+  // // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  // const ADMIN_EMAIL01 = process.env.ADMIN_EMAIL01;
 
+  // if (
+  //   !user ||
+  //   (user.email !== process.env.ADMIN_EMAIL &&
+  //     user.email !== process.env.ADMIN_EMAIL01)
+  // )
+  //   return notFound();
   if (!user || user.email !== process.env.ADMIN_EMAIL) return notFound();
 
   const orders = await db.order.findMany({
