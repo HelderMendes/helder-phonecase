@@ -26,7 +26,7 @@ const OrderRecieveEmail = ({
   const baseUrl =
     process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
-      : 'https://phonecasehelder.vercel.app';
+      : 'https://helder-phonecase.vercel.app';
 
   return (
     <Html>
