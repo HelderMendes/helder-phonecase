@@ -1,14 +1,14 @@
 import { db } from '@/db';
 import { stripe } from '@/lib/stripe';
 import { headers } from 'next/headers';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { Resend } from 'resend';
 import OrderReceivedEmail from '@/components/emails/OrderReceivedEmail';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: NextRequest) {
+export async function POST(req: Request) {
   try {
     const body = await req.text();
     const signature = headers().get('stripe-signature');
