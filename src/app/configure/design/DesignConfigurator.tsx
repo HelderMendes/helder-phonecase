@@ -400,7 +400,7 @@ export default function DesignConfigurator({
               </p>
               <Button
                 isLoading={isPending}
-                // disable={isPending}
+                disabled={isPending}
                 loadingText='Saving'
                 // onClick={(e) => saveConfiguration(e)}
                 onClick={() =>
