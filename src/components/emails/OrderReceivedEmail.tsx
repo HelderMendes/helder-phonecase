@@ -14,7 +14,7 @@ import {
   Column,
 } from '@react-email/components';
 
-const OrderRecieveEmail = ({
+const OrderReceivedEmail = ({
   shippingAddress,
   orderId,
   orderDate,
@@ -91,7 +91,7 @@ const OrderRecieveEmail = ({
             </Row>
             <Row>
               <Text style={footer.text}>
-                &copy;Helder Case, Inc. All Rights Reserved.
+                &copy;Helder Phone Case, Inc. All Rights Reserved.
               </Text>
             </Row>
           </Section>
@@ -101,7 +101,7 @@ const OrderRecieveEmail = ({
   );
 };
 
-export default OrderRecieveEmail;
+export default OrderReceivedEmail;
 
 const paddingX = {
   paddingLeft: '40px',

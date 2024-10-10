@@ -28,27 +28,6 @@ const RotateHandler: React.FC<RotateHandlerProps> = ({
           }%, #e5e7eb ${(rotation / 360) * 100}%, #e5e7eb 100%)`, // Dynamic background fill
         }}
       />
-      <style jsx>{`
-        input[type='range']::-webkit-slider-runnable-track {
-          height: 16px;
-        }
-        input[type='range']::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 16px;
-          height: 16px;
-          border-radius: 50%;
-          background: rgb(109, 40, 217); /* Color of the handler */
-          cursor: pointer;
-        }
-        input[type='range']::-moz-range-thumb {
-          width: 16px;
-          height: 16px;
-          border-radius: 50%;
-          background: rgb(109, 40, 217);
-          cursor: pointer;
-        }
-      `}</style>
     </div>
   );
 };
