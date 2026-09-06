@@ -28,6 +28,7 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+.env.*
 
 # vercel
 .vercel
@@ -35,3 +36,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# extras
+STRIPE_DEVELOPMENT_GUIDE.md
+supabase_db_migration_and_testing.md
+postgresql_local_db_setup.md
+postgresql_local_setup.md
