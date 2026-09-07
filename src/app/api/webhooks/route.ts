@@ -68,7 +68,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: 'Helder Phone Case <info@helderdesign.nl>',
-      to: [event.data.object.customer_details.email],
+      to: [session.customer_details!.email!],
       subject: 'We appreciate your order. Thank you!',
       react: OrderReceivedEmail({
         orderId,
